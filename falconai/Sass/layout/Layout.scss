@@ -1,0 +1,75 @@
+.main-nav {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #b5a497;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    height: 60px;
+    background-color: black;
+    position: sticky;
+    display: grid;
+    padding: 0.5rem 0rem;
+    grid-column: column-start/column-end;
+    align-items: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background: url('http://www.dummyimage.com/300x300/000/fff&text=parent+image');
+        z-index: 11;
+    }
+
+   
+    }
+    div {
+        grid-column: col-start 6 / col-end 6;
+
+        @media only screen and(max-width:$bp-smallest) {
+            grid-column: col-start 3 / col-end 4;
+        }
+    }
+    ul {
+        display: grid;
+        grid-column: col-start 8 / col-end 9;
+        grid-template-columns: 1fr 1fr;
+        @media only screen and(max-width:$bp-smallest) {
+            grid-column: col-start 4 / col-end 9;
+        }
+
+        li a {
+            text-decoration: none;
+            padding: 1.75rem;
+            font-weight: bold;
+
+            &:hover {
+                background: $color-grey-dark-3;
+            }
+            color: #6d482c;
+        }
+    }
+
+
+.fab {
+    margin-right: 1rem;
+    color: #ab7e54;
+}
+
+p {
+    height: 170rem;
+}
+.issticky {
+    top: 0;
+}
+
+.shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}

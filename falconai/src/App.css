@@ -1,0 +1,88 @@
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 2rem; }
+
+.container {
+  display: grid;
+  position: relative;
+  grid-template-rows: max-content 10vh 50vh;
+  grid-template-columns: [column-start begining-start] 25vw [begining-end left-margin-start] 1fr [left-margin-end centre-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [centre-end] 1fr [column-end]; }
+
+p
+h1 {
+  font-size: 50px; }
+
+.main-nav {
+  height: 60px;
+  background-color: black;
+  position: sticky;
+  display: grid;
+  padding: 0.5rem 0rem;
+  grid-column: column-start/column-end;
+  align-items: center; }
+  .main-nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b5a497;
+    z-index: -1;
+    opacity: 0.5; }
+  .main-nav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: url("http://www.dummyimage.com/300x300/000/fff&text=parent+image");
+    z-index: 11; }
+
+div {
+  grid-column: col-start 6 / col-end 6; }
+  @media only screen and (max-width: 25em) {
+    div {
+      grid-column: col-start 3 / col-end 4; } }
+
+ul {
+  display: grid;
+  grid-column: col-start 8 / col-end 9;
+  grid-template-columns: 1fr 1fr; }
+  @media only screen and (max-width: 25em) {
+    ul {
+      grid-column: col-start 4 / col-end 9; } }
+  ul li a {
+    text-decoration: none;
+    padding: 1.75rem;
+    font-weight: bold;
+    color: #6d482c; }
+    ul li a:hover {
+      background: rgba(59, 10, 10, 0.445); }
+
+.fab {
+  margin-right: 1rem;
+  color: #ab7e54; }
+
+p {
+  height: 170rem; }
+
+.issticky {
+  top: 0; }
+
+.shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
