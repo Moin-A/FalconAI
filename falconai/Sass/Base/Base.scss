@@ -30,12 +30,13 @@ body {
     font-size: 2rem;
 }
 
-.container {
+.Container {
     display: grid;
+    overflow: scroll;
     position: relative;
     grid-template-rows: max-content 10vh 50vh;
     grid-template-columns:
-        [column-start begining-start]25vw[begining-end left-margin-start]1fr[left-margin-end centre-start]repeat(
+        [column-start]1fr[centre-start]repeat(
             8,
             [col-start] minmax(min-content, 14rem) [col-end]
         )

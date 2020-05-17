@@ -1,7 +1,7 @@
 .main-nav {
     &::before {
         content: '';
-        position: absolute;
+        position: sticky;
         top: 0;
         left: 0;
         right: 0;
@@ -14,7 +14,7 @@
     background-color: black;
     position: sticky;
     display: grid;
-    padding: 0.5rem 0rem;
+    padding: 0rem 0rem;
     grid-column: column-start/column-end;
     align-items: center;
 
@@ -46,7 +46,7 @@
 
         li a {
             text-decoration: none;
-            padding: 1.75rem;
+            padding: 0.75rem;
             font-weight: bold;
 
             &:hover {
@@ -58,7 +58,7 @@
 
 
 .fab {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     color: #ab7e54;
 }
 

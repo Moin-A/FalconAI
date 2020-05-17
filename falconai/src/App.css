@@ -17,11 +17,12 @@ body {
   line-height: 1.6;
   font-size: 2rem; }
 
-.container {
+.Container {
   display: grid;
+  overflow: scroll;
   position: relative;
   grid-template-rows: max-content 10vh 50vh;
-  grid-template-columns: [column-start begining-start] 25vw [begining-end left-margin-start] 1fr [left-margin-end centre-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [centre-end] 1fr [column-end]; }
+  grid-template-columns: [column-start] 1fr [centre-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [centre-end] 1fr [column-end]; }
 
 p
 h1 {
@@ -32,12 +33,12 @@ h1 {
   background-color: black;
   position: sticky;
   display: grid;
-  padding: 0.5rem 0rem;
+  padding: 0rem 0rem;
   grid-column: column-start/column-end;
   align-items: center; }
   .main-nav::before {
     content: '';
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -68,14 +69,14 @@ ul {
       grid-column: col-start 4 / col-end 9; } }
   ul li a {
     text-decoration: none;
-    padding: 1.75rem;
+    padding: 0.75rem;
     font-weight: bold;
     color: #6d482c; }
     ul li a:hover {
       background: rgba(59, 10, 10, 0.445); }
 
 .fab {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   color: #ab7e54; }
 
 p {
